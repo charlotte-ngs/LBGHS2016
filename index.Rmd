@@ -1,0 +1,78 @@
+---
+title:  Züchtungslehre
+author: Peter von Rohr
+date:   18.09.2016
+output: 
+  html_document:
+    toc_float: true
+    toc: true
+    theme: united
+    highlight: tango
+---
+
+Willkommen auf der Webseite der Vorlesung  
+
+- [751-6305-00L 	Züchtungslehre](http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheitPre.do?lerneinheitId=109011&semkez=2016W&lang=de)
+
+
+## Beschreibung
+Methoden zur Analyse tierzüchterischer Daten, insbesondere zum Schätzen von Zuchtwerten: Prinzip der Indexselektion, Übersicht über theoretische Grundlagen von BLUP, Anwendung von gebräuchlichen Modellen, Verwandtschaftsmatrix, Methoden zum Schätzen von Varianzkomponenten, Grundlagen Zuchtprogramme. Der vorgelesene Stoff wird durch Übungen und Anwendungen vertieft.
+
+
+## Information
+Dozent: Peter von Rohr
+Datum: Freitag 9-12
+Ort: [LFW C 11](http://www.mapsearch.ethz.ch/map/map.do?gebaeudeMap=LFW&lang=en)
+
+
+## Fragen
+Fragen können jederzeit während der Vorlesung und während der Übungsstunde oder via Email gestellt werden: 
+
+- Peter von Rohr (peter.vonrohr `at` gmail.com)
+
+
+## Material
+Folien und Übungen können hier heruntergeladen werden. 
+
+### Folien
+```{r SlidesTable, echo=FALSE, results='asis'}
+# define course start date
+dCourseStart <- as.Date("2016/09/23")
+# set number of weeks in semester
+nNrSemesterWeeks <- 14
+# define columns for weaks, dates, and subjects
+Woche <- 1:nNrSemesterWeeks
+Datum <- format(seq(dCourseStart, by = "week", length.out = nNrSemesterWeeks), "%d.%m")
+Thema <- vector(mode = "character", length = nNrSemesterWeeks)
+# set subject for special dates
+# holiday
+sHoliday <- format(as.Date("2016/10/14"), "%d.%m")
+nSubjHoliday <- which(Datum == sHoliday)
+Thema[nSubjHoliday] <- "keine Vorlesung"
+# exam
+Thema[length(Thema)] <- "Prüfung"
+dfSlideTable <- data.frame(Woche, Datum, Thema, stringsAsFactors = FALSE)
+knitr::kable(dfSlideTable)
+```
+
+
+### Übungen
+```{r ExerciseTable, echo=FALSE, results='asis'}
+dfExTable <- dfSlideTable
+knitr::kable(dfExTable)
+```
+
+
+### Lösungen
+```{r SolutionTable, echo=FALSE, results='asis'}
+dfSolTable <- dfSlideTable
+knitr::kable(dfSolTable[2:nrow(dfSolTable),])
+```
+
+### Weitere Materialien
+
+
+## Letzte Änderung
+_`r paste(Sys.time(),paste0("(", Sys.info()[["user"]],")" ))`_
+
+
