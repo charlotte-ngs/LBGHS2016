@@ -30,11 +30,41 @@ Fragen können jederzeit während der Vorlesung und während der Übungsstunde o
 
 - Peter von Rohr (peter.vonrohr `at` gmail.com)
 
+## Vorlesungsprogramm
+```{r CourseProgram, echo=FALSE, results='asis'}
+# define course start date
+dCourseStart <- as.Date("2016/09/23")
+# set number of weeks in semester
+nNrSemesterWeeks <- 14
+# define columns for weaks, dates, and subjects
+Woche <- 1:nNrSemesterWeeks
+Datum <- format(seq(dCourseStart, by = "week", length.out = nNrSemesterWeeks), "%d.%m")
+Thema <- vector(mode = "character", length = nNrSemesterWeeks)
+# subjects per week
+Thema[which(Datum == format(as.Date("2016/09/23"), "%d.%m"))] <- "Einführung, Lineare Algebra, R"
+Thema[which(Datum == format(as.Date("2016/09/30"), "%d.%m"))] <- "Repetition Quantitative Genetik"
+Thema[which(Datum == format(as.Date("2016/10/07"), "%d.%m"))] <- "Selektionsindex"
+Thema[which(Datum == format(as.Date("2016/10/14"), "%d.%m"))] <- "keine Vorlesung"
+Thema[which(Datum == format(as.Date("2016/10/21"), "%d.%m"))] <- "Inverse Verwandtschaftsmatrix"
+Thema[which(Datum == format(as.Date("2016/10/28"), "%d.%m"))] <- "Varianzanalyse"
+Thema[which(Datum == format(as.Date("2016/11/04"), "%d.%m"))] <- "Varianzkomponentenschätzung "
+Thema[which(Datum == format(as.Date("2016/11/11"), "%d.%m"))] <- "BLUP I"
+Thema[which(Datum == format(as.Date("2016/11/18"), "%d.%m"))] <- "BLUP II"
+Thema[which(Datum == format(as.Date("2016/11/25"), "%d.%m"))] <- "Linkage disequilibrium"
+Thema[which(Datum == format(as.Date("2016/12/02"), "%d.%m"))] <- "Genomische Selektion "
+Thema[which(Datum == format(as.Date("2016/12/09"), "%d.%m"))] <- "Genom-weite Assoziationsstudien"
+Thema[which(Datum == format(as.Date("2016/12/16"), "%d.%m"))] <- "Reserve, Fragen"
+Thema[which(Datum == format(as.Date("2016/12/23"), "%d.%m"))] <- "Prüfung"
+
+dfSlideTable <- data.frame(Woche, Datum, Thema, stringsAsFactors = FALSE)
+knitr::kable(dfSlideTable)
+```
+
 
 ## Material
-Folien und Übungen können hier heruntergeladen werden. 
+Unterlagen (Skript oder Folien) und Übungen können hier heruntergeladen werden. 
 
-### Folien
+### Unterlagen
 ```{r SlidesTable, echo=FALSE, results='asis'}
 # define course start date
 dCourseStart <- as.Date("2016/09/23")
@@ -51,6 +81,8 @@ nSubjHoliday <- which(Datum == sHoliday)
 Thema[nSubjHoliday] <- "keine Vorlesung"
 # exam
 Thema[length(Thema)] <- "Prüfung"
+# subjects per week
+Thema[which(Datum == format(as.Date("2016/09/23"), "%d.%m"))] <- "Einführung, [Lineare Algebra](https://charlotte-ngs.github.io/LBGHS2016/w1/zl_hs_2016_course_notes_intro_lin_alg.pdf), [Einführung in R](https://charlotte-ngs.github.io/LBGHS2016/w1/zl_hs_2016_course_notes_intro_r.pdf)"
 dfSlideTable <- data.frame(Woche, Datum, Thema, stringsAsFactors = FALSE)
 knitr::kable(dfSlideTable)
 ```
@@ -59,6 +91,7 @@ knitr::kable(dfSlideTable)
 ### Übungen
 ```{r ExerciseTable, echo=FALSE, results='asis'}
 dfExTable <- dfSlideTable
+dfExTable$Thema[which(Datum == format(as.Date("2016/09/23"), "%d.%m"))] <- ""
 knitr::kable(dfExTable)
 ```
 
@@ -66,6 +99,7 @@ knitr::kable(dfExTable)
 ### Lösungen
 ```{r SolutionTable, echo=FALSE, results='asis'}
 dfSolTable <- dfSlideTable
+dfSolTable$Thema[which(Datum == format(as.Date("2016/09/23"), "%d.%m"))] <- ""
 knitr::kable(dfSolTable[2:nrow(dfSolTable),])
 ```
 
