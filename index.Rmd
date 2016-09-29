@@ -83,6 +83,8 @@ Thema[nSubjHoliday] <- "keine Vorlesung"
 Thema[length(Thema)] <- "Prüfung"
 # subjects per week
 Thema[which(Datum == format(as.Date("2016/09/23"), "%d.%m"))] <- "Einführung, [Lineare Algebra](https://charlotte-ngs.github.io/LBGHS2016/w1/zl_hs_2016_course_notes_intro_lin_alg.pdf), [Einführung in R](https://charlotte-ngs.github.io/LBGHS2016/w1/zl_hs_2016_course_notes_intro_r.pdf)"
+Thema[which(Datum == format(as.Date("2016/09/30"), "%d.%m"))] <- "[Quantitative Genetik](https://charlotte-ngs.github.io/LBGHS2016/w2/zl_hs_2016_w2_course_notes_rep_qg.pdf)"
+
 dfSlideTable <- data.frame(Woche, Datum, Thema, stringsAsFactors = FALSE)
 knitr::kable(dfSlideTable)
 ```
@@ -91,7 +93,9 @@ knitr::kable(dfSlideTable)
 ### Übungen
 ```{r ExerciseTable, echo=FALSE, results='asis'}
 dfExTable <- dfSlideTable
-dfExTable$Thema[which(Datum == format(as.Date("2016/09/23"), "%d.%m"))] <- ""
+dfExTable$Thema[which(Datum == format(as.Date("2016/09/23"), "%d.%m"))] <- "keine Übung"
+dfExTable$Thema[which(Datum == format(as.Date("2016/09/30"), "%d.%m"))] <- "[Lineare Algebra](https://charlotte-ngs.github.io/LBGHS2016/w2/zl_hs_2016_ex1_w2.pdf)"
+
 knitr::kable(dfExTable)
 ```
 
