@@ -84,6 +84,8 @@ Thema[length(Thema)] <- "Prüfung"
 # subjects per week
 Thema[which(Datum == format(as.Date("2016/09/23"), "%d.%m"))] <- "Einführung, [Lineare Algebra](https://charlotte-ngs.github.io/LBGHS2016/w1/zl_hs_2016_course_notes_intro_lin_alg.pdf), [Einführung in R](https://charlotte-ngs.github.io/LBGHS2016/w1/zl_hs_2016_course_notes_intro_r.pdf)"
 Thema[which(Datum == format(as.Date("2016/09/30"), "%d.%m"))] <- "[Quantitative Genetik](https://charlotte-ngs.github.io/LBGHS2016/w2/zl_hs_2016_w2_course_notes_rep_qg.pdf)"
+Thema[which(Datum == format(as.Date("2016/10/07"), "%d.%m"))] <- "[Tierzucht und Selektionsindex](https://charlotte-ngs.github.io/LBGHS2016/w3/zl_hs_2016_w3_course_notes_index.pdf)"
+Thema[which(Datum == format(as.Date("2016/10/21"), "%d.%m"))] <- "[Verwandtschaft und Inzucht](https://charlotte-ngs.github.io/LBGHS2016/w5/zl_hs_2016_w5_course_notes_rel_inb.pdf)"
 
 dfSlideTable <- data.frame(Woche, Datum, Thema, stringsAsFactors = FALSE)
 knitr::kable(dfSlideTable)
@@ -95,6 +97,8 @@ knitr::kable(dfSlideTable)
 dfExTable <- dfSlideTable
 dfExTable$Thema[which(Datum == format(as.Date("2016/09/23"), "%d.%m"))] <- "keine Übung"
 dfExTable$Thema[which(Datum == format(as.Date("2016/09/30"), "%d.%m"))] <- "[Lineare Algebra](https://charlotte-ngs.github.io/LBGHS2016/w2/zl_hs_2016_ex1_w2.pdf)"
+dfExTable$Thema[which(Datum == format(as.Date("2016/10/07"), "%d.%m"))] <- "[Gleichungssysteme und Quantitative Genetik](https://charlotte-ngs.github.io/LBGHS2016/w3/zl_hs_2016_w3_ex2.pdf)"
+dfExTable$Thema[which(Datum == format(as.Date("2016/10/21"), "%d.%m"))] <- "[Quantitative Genetik](https://charlotte-ngs.github.io/LBGHS2016/w5/zl_hs_2016_w5_ex3.pdf)"
 
 knitr::kable(dfExTable)
 ```
@@ -105,11 +109,21 @@ knitr::kable(dfExTable)
 dfSolTable <- dfSlideTable
 dfSolTable$Thema[which(Datum == format(as.Date("2016/09/23"), "%d.%m"))] <- ""
 dfSolTable$Thema[which(Datum == format(as.Date("2016/09/30"), "%d.%m"))] <- ""
+dfSolTable$Thema[which(Datum == format(as.Date("2016/10/07"), "%d.%m"))] <- "[Lineare Algebra](https://charlotte-ngs.github.io/LBGHS2016/w2/zl_hs_2016_sol1_w2.pdf)"
+dfSolTable$Thema[which(Datum == format(as.Date("2016/10/21"), "%d.%m"))] <- "[Gleichungssysteme und Quantitative Genetik](https://charlotte-ngs.github.io/LBGHS2016/w3/zl_hs_2016_w3_sol2.pdf)"
 
 knitr::kable(dfSolTable)
 ```
 
 ### Weitere Materialien
+```{r FurtherMatTable, echo=FALSE, results='asis'}
+dfFurtherMatTable <- data.frame(Woche = c(5,5), 
+                                Datum = c(format(as.Date("2016/10/21"), "%d.%m"),
+                                          format(as.Date("2016/10/21"), "%d.%m")),
+                                Thema = c("[Korrektur Herleitung Zuchtwert](https://charlotte-ngs.github.io/LBGHS2016/w2/zl_hs_2016_w2_course_notes_korrektur_zw12.pdf)",
+                                          "[Iris Datensatz](https://charlotte-ngs.github.io/LBGHS2016/w5/iris.csv)"))
+knitr::kable(dfFurtherMatTable)
+```
 
 
 ## Letzte Änderung
