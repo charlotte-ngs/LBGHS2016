@@ -99,6 +99,7 @@ dfExTable$Thema[which(Datum == format(as.Date("2016/09/23"), "%d.%m"))] <- "kein
 dfExTable$Thema[which(Datum == format(as.Date("2016/09/30"), "%d.%m"))] <- "[Lineare Algebra](https://charlotte-ngs.github.io/LBGHS2016/w2/zl_hs_2016_ex1_w2.pdf)"
 dfExTable$Thema[which(Datum == format(as.Date("2016/10/07"), "%d.%m"))] <- "[Gleichungssysteme und Quantitative Genetik](https://charlotte-ngs.github.io/LBGHS2016/w3/zl_hs_2016_w3_ex2.pdf)"
 dfExTable$Thema[which(Datum == format(as.Date("2016/10/21"), "%d.%m"))] <- "[Quantitative Genetik](https://charlotte-ngs.github.io/LBGHS2016/w5/zl_hs_2016_w5_ex3.pdf)"
+dfExTable$Thema[which(Datum == format(as.Date("2016/10/28"), "%d.%m"))] <- "[Zuchtwertschätzung](https://charlotte-ngs.github.io/LBGHS2016/w6/zl_hs_2016_w6_ex4.pdf)"
 
 knitr::kable(dfExTable)
 ```
@@ -111,6 +112,7 @@ dfSolTable$Thema[which(Datum == format(as.Date("2016/09/23"), "%d.%m"))] <- ""
 dfSolTable$Thema[which(Datum == format(as.Date("2016/09/30"), "%d.%m"))] <- ""
 dfSolTable$Thema[which(Datum == format(as.Date("2016/10/07"), "%d.%m"))] <- "[Lineare Algebra](https://charlotte-ngs.github.io/LBGHS2016/w2/zl_hs_2016_sol1_w2.pdf)"
 dfSolTable$Thema[which(Datum == format(as.Date("2016/10/21"), "%d.%m"))] <- "[Gleichungssysteme und Quantitative Genetik](https://charlotte-ngs.github.io/LBGHS2016/w3/zl_hs_2016_w3_sol2.pdf)"
+dfSolTable$Thema[which(Datum == format(as.Date("2016/10/28"), "%d.%m"))] <- "[Quantitative Genetik](https://charlotte-ngs.github.io/LBGHS2016/w5/zl_hs_2016_w5_sol3.pdf)"
 
 knitr::kable(dfSolTable)
 ```
