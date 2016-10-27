@@ -86,6 +86,7 @@ Thema[which(Datum == format(as.Date("2016/09/23"), "%d.%m"))] <- "Einführung, [
 Thema[which(Datum == format(as.Date("2016/09/30"), "%d.%m"))] <- "[Quantitative Genetik](https://charlotte-ngs.github.io/LBGHS2016/w2/zl_hs_2016_w2_course_notes_rep_qg.pdf)"
 Thema[which(Datum == format(as.Date("2016/10/07"), "%d.%m"))] <- "[Tierzucht und Selektionsindex](https://charlotte-ngs.github.io/LBGHS2016/w3/zl_hs_2016_w3_course_notes_index.pdf)"
 Thema[which(Datum == format(as.Date("2016/10/21"), "%d.%m"))] <- "[Verwandtschaft und Inzucht](https://charlotte-ngs.github.io/LBGHS2016/w5/zl_hs_2016_w5_course_notes_rel_inb.pdf)"
+Thema[which(Datum == format(as.Date("2016/10/28"), "%d.%m"))] <- "[Inverse Verwandtschaftsmatrix](https://charlotte-ngs.github.io/LBGHS2016/w6/zl_hs_2016_w6_course_notes_inverse_addrelmat.pdf)"
 
 dfSlideTable <- data.frame(Woche, Datum, Thema, stringsAsFactors = FALSE)
 knitr::kable(dfSlideTable)
