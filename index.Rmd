@@ -89,6 +89,7 @@ Thema[which(Datum == format(as.Date("2016/10/21"), "%d.%m"))] <- "[Verwandtschaf
 Thema[which(Datum == format(as.Date("2016/10/28"), "%d.%m"))] <- "[Inverse Verwandtschaftsmatrix](https://charlotte-ngs.github.io/LBGHS2016/w6/zl_hs_2016_w6_course_notes_inverse_addrelmat.pdf)"
 Thema[which(Datum == format(as.Date("2016/11/04"), "%d.%m"))] <- "[Berechnung der Inzucht](https://charlotte-ngs.github.io/LBGHS2016/w7/zl_hs_2016_w7_cn6_Inbreeding.pdf)"
 Thema[which(Datum == format(as.Date("2016/11/11"), "%d.%m"))] <- "[BLUP Zuchtwertschätzung](https://charlotte-ngs.github.io/LBGHS2016/w8/zl_hs_2016_w8_cn7_blup.pdf)"
+Thema[which(Datum == format(as.Date("2016/11/18"), "%d.%m"))] <- "[Eigenschaften von BLUP Zuchtwerten](https://charlotte-ngs.github.io/LBGHS2016/w9/zl_hs_2016_w9_cn8_blup_prop.pdf)"
 
 dfSlideTable <- data.frame(Woche, Datum, Thema, stringsAsFactors = FALSE)
 knitr::kable(dfSlideTable)
@@ -105,6 +106,7 @@ dfExTable$Thema[which(Datum == format(as.Date("2016/10/21"), "%d.%m"))] <- "[Qua
 dfExTable$Thema[which(Datum == format(as.Date("2016/10/28"), "%d.%m"))] <- "[Zuchtwertschätzung](https://charlotte-ngs.github.io/LBGHS2016/w6/zl_hs_2016_w6_ex4.pdf)"
 dfExTable$Thema[which(Datum == format(as.Date("2016/11/04"), "%d.%m"))] <- "[Verwandtschaftsmatrix](https://charlotte-ngs.github.io/LBGHS2016/w7/zl_hs_2016_w7_ex5.pdf)"
 dfExTable$Thema[which(Datum == format(as.Date("2016/11/11"), "%d.%m"))] <- "[Inverse Verwandtschaftsmatrix](https://charlotte-ngs.github.io/LBGHS2016/w8/zl_hs_2016_w8_ex6.pdf)"
+dfExTable$Thema[which(Datum == format(as.Date("2016/11/18"), "%d.%m"))] <- "[Inzuchtberechnung](https://charlotte-ngs.github.io/LBGHS2016/w9/zl_hs_2016_w9_ex7.pdf)"
 
 knitr::kable(dfExTable)
 ```
@@ -120,6 +122,7 @@ dfSolTable$Thema[which(Datum == format(as.Date("2016/10/21"), "%d.%m"))] <- "[Gl
 dfSolTable$Thema[which(Datum == format(as.Date("2016/10/28"), "%d.%m"))] <- "[Quantitative Genetik](https://charlotte-ngs.github.io/LBGHS2016/w5/zl_hs_2016_w5_sol3.pdf)"
 dfSolTable$Thema[which(Datum == format(as.Date("2016/11/04"), "%d.%m"))] <- "[Zuchtwertschätzung](https://charlotte-ngs.github.io/LBGHS2016/w6/zl_hs_2016_w6_sol4.pdf)"
 dfSolTable$Thema[which(Datum == format(as.Date("2016/11/11"), "%d.%m"))] <- "[Verwandtschaftsmatrix](https://charlotte-ngs.github.io/LBGHS2016/w7/zl_hs_2016_w7_sol5.pdf)"
+dfSolTable$Thema[which(Datum == format(as.Date("2016/11/18"), "%d.%m"))] <- "[Inverse Verwandtschaftsmatrix](https://charlotte-ngs.github.io/LBGHS2016/w8/zl_hs_2016_w8_sol6.pdf)"
 
 knitr::kable(dfSolTable)
 ```
