@@ -135,6 +135,7 @@ dfSolTable$Thema[which(Datum == format(as.Date("2016/11/25"), "%d.%m"))] <- "[In
 dfSolTable$Thema[which(Datum == format(as.Date("2016/12/02"), "%d.%m"))] <- "[Eigenschaften von BLUP Zuchtwerten](https://charlotte-ngs.github.io/LBGHS2016/w10/zl_hs_2016_w10_sol8.pdf)"
 dfSolTable$Thema[which(Datum == format(as.Date("2016/12/09"), "%d.%m"))] <- "[Vergleich von  geschätzten Zuchtwerten](https://charlotte-ngs.github.io/LBGHS2016/w11/zl_hs_2016_w11_sol9.pdf)"
 dfSolTable$Thema[which(Datum == format(as.Date("2016/12/16"), "%d.%m"))] <- "[Zerlegung von phänotypischen Leistungen](https://charlotte-ngs.github.io/LBGHS2016/w12/zl_hs_2016_w12_sol10.pdf)"
+dfSolTable$Thema[which(Datum == format(as.Date("2016/12/23"), "%d.%m"))] <- "[Probeprüfung](https://charlotte-ngs.github.io/LBGHS2016/w13/zl_hs_2016_w13_sol11.pdf)"
 
 knitr::kable(dfSolTable)
 ```
