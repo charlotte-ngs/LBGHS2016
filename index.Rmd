@@ -68,7 +68,7 @@ knitr::kable(dfSlideTable)
 Unterlagen (Skript oder Folien) und Übungen können hier heruntergeladen werden. 
 
 ### Unterlagen
-```{r SlidesTable, echo=FALSE, results='asis'}
+```{r MaterialTable, echo=FALSE, results='asis'}
 # define course start date
 dCourseStart <- as.Date("2016/09/23")
 # set number of weeks in semester
@@ -99,6 +99,25 @@ Thema[which(Datum == format(as.Date("2016/12/09"), "%d.%m"))] <- "[Genomische Se
 
 dfSlideTable <- data.frame(Woche, Datum, Thema, stringsAsFactors = FALSE)
 knitr::kable(dfSlideTable)
+```
+
+
+### Folien
+```{r SlidesTable, echo=FALSE, results='asis'}
+sSlidesPath <- "../../gh-pages/LBGHS2016/slides"
+vecListSlides <- list.files(path = sSlidesPath)
+vecOrderSlides <- c(1,4,5,6,7,8,9,10,2,3)
+vecListSlides <- vecListSlides[vecOrderSlides]
+nNrSlides <- length(vecListSlides)
+vecTitel <- c("Einführung","Quantitative Genetik","Index","Verwandtschaft","Inverse Verwantschaft",
+              "Inzucht","BLUP","BLUP Eigenschaften","Varianzkomponenten1 ","Varianzkomponenten 2")
+sBaseUrl <- "https://charlotte-ngs.github.io/LBGHS2016/slides/"
+vecLinks <- sapply(1:nNrSlides, function(x) paste0("[",vecTitel[x],"](",sBaseUrl,vecListSlides[x],")"))
+dfSlides <- data.frame(Nr <- c(1:nNrSlides),
+                       Thema <- vecLinks,
+                       stringsAsFactors = FALSE)
+names(dfSlides) <- c("Nr", "Thema")
+knitr::kable(dfSlides)
 ```
 
 
@@ -142,6 +161,7 @@ dfSolTable$Thema[which(Datum == format(as.Date("2016/12/23"), "%d.%m"))] <- "[Pr
 
 knitr::kable(dfSolTable)
 ```
+
 
 ### Weitere Materialien
 ```{r FurtherMatTable, echo=FALSE, results='asis'}
